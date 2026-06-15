@@ -14,6 +14,9 @@ jobs:
       - name: greets user
         run: echo "Hello from GitHub Actions!" 
 
+      - name: Break Pipeline
+        run: exit 1
+
       - name: print current date and time
         run : date
    
