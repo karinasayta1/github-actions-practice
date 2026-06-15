@@ -1,27 +1,32 @@
 name: First Workflow
 
 on:
-  push:
+push:
+branches:
+- main
+- master
 
 jobs:
-  greet:
-    runs-on: ubuntu-latest
+greet:
+runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+```
+steps:
+  - name: Checkout code
+    uses: actions/checkout@v4
 
-      - name: Say Hello
-        run: echo "Hello from GitHub Actions!"
+  - name: Say Hello
+    run: echo "Hello from GitHub Actions!"
 
-      - name: Print Date
-        run: date
+  - name: Print Date
+    run: date
 
-      - name: Show Branch Name
-        run: echo "Branch: ${{ github.ref_name }}"
+  - name: Show Branch Name
+    run: echo "Branch: ${{ github.ref_name }}"
 
-      - name: List Files
-        run: ls -la
+  - name: List Files
+    run: ls -la
 
-      - name: Show OS
-        run: uname -a
+  - name: Show OS
+    run: uname -a
+```
