@@ -20,8 +20,8 @@ steps:
   - name: Print Date
     run: date
 
-  - name: Show Branch Name
-    run: echo "Branch: ${{ github.ref_name }}"
+  - name: Printing name of the branch that triggered the workflow
+    run: echo "Branch:" ${{ github.ref_name }}
 
   - name: List Files
     run: ls -la
