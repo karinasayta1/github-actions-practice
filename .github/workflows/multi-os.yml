@@ -6,7 +6,8 @@ jobs:
   ubuntu-job:
     runs-on: ubuntu-latest
     steps:
-      - run: |
+      - name: Ubuntu Info
+        run: |
           echo "OS: Ubuntu"
           hostname
           whoami
@@ -14,15 +15,18 @@ jobs:
   windows-job:
     runs-on: windows-latest
     steps:
-      - run: |
+      - name: Windows Info
+        run: |
           echo OS: Windows
           hostname
           whoami
+        shell: bash   # 👈 IMPORTANT FIX
 
   mac-job:
     runs-on: macos-latest
     steps:
-      - run: |
+      - name: macOS Info
+        run: |
           echo "OS: macOS"
           hostname
           whoami
