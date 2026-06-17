@@ -1,19 +1,20 @@
-name: Job Outputs Demo
+name: Job Outputs Example
 
 on: push
 
 jobs:
   generate:
     runs-on: ubuntu-latest
+
     outputs:
-      today_date: ${{ steps.set_date.outputs.date }}
+      today_date: ${{ steps.set_date.outputs.today_date }}
 
     steps:
-      - name: Set Date
+      - name: Generate Date
         id: set_date
-        run: echo "date=$(date)" >> $GITHUB_OUTPUT
+        run: echo "today_date=$(date)" >> $GITHUB_OUTPUT
 
-  consume:
+  use-output:
     runs-on: ubuntu-latest
     needs: generate
 
