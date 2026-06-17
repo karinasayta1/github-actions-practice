@@ -28,4 +28,5 @@ jobs:
           fi
 
       - name: Commit Message
-        run: echo "Commit: ${{ github.event.commits[0].message }}"
+        run: |
+        echo "Commit: ${{ github.event.commits[0].message }}"
