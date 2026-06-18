@@ -1,6 +1,8 @@
 name: Multi OS Jobs
 
-on: push
+on: 
+#  push
+  workflow_dispatch:
 
 jobs:
   ubuntu-job:

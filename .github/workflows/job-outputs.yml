@@ -1,7 +1,8 @@
 name: Job Outputs Example
 
 on:
-  push:
+  # push:
+  workflow_dispatch:
 
 jobs:
   generate:

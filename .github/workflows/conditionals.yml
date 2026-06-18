@@ -1,8 +1,9 @@
 name: Conditionals Demo
 
 on:
-  push:
-  pull_request:
+  # push:
+  # pull_request:
+  workflow_dispatch:
 
 jobs:
   conditional-job:
