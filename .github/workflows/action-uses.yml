@@ -12,4 +12,4 @@ jobs:
         uses: ./.github/actions/setup-and-greet
         with:
           name: "Karina"
-          language: "en
+          language: "en"
