@@ -33,4 +33,5 @@ jobs:
 
       - name: Set Version
         id: set_version
-        run: echo "version=v1.0-${GITHUB_SHA::7}" >> $GITHUB_OUTPUT
+        run: |
+          echo "version=v1.0-${GITHUB_SHA::7}" >> $GITHUB_OUTPUT
