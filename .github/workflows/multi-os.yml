@@ -1,0 +1,40 @@
+name: Multi OS Jobs
+
+on: 
+#  push
+  workflow_dispatch:
+
+jobs:
+  ubuntu-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ubuntu Info
+        run: |
+          echo "OS: Ubuntu"
+          hostname
+          whoami
+      - name: Check tools
+        run: |
+          docker --version
+          python --version
+          node --version
+          git --version
+
+  windows-job:
+    runs-on: windows-latest
+    steps:
+      - name: Windows Info
+        run: |
+          echo OS: Windows
+          hostname
+          whoami
+        shell: bash   # 👈 IMPORTANT FIX
+
+  mac-job:
+    runs-on: macos-latest
+    steps:
+      - name: macOS Info
+        run: |
+          echo "OS: macOS"
+          hostname
+          whoami

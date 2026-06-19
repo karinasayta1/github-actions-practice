@@ -1,0 +1,31 @@
+name: Setup and Greet
+
+inputs:
+  name:
+    required: true
+  language:
+    required: false
+    default: en
+
+outputs:
+  greeted:
+    value: "true"
+
+runs:
+  using: "composite"
+
+  steps:
+    - name: Greeting
+      shell: bash
+      run: |
+        if [ "${{ inputs.language }}" = "en" ]; then
+          echo "Hello ${{ inputs.name }}"
+        else
+          echo "Namaste ${{ inputs.name }}"
+        fi
+
+    - name: System Info
+      shell: bash
+      run: |
+        echo "Date: $(date)"
+        echo "OS: $RUNNER_OS"

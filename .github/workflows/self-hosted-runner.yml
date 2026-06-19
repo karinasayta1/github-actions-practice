@@ -1,0 +1,19 @@
+name: Self Hosted Job
+
+on: 
+  # push
+  workflow_dispatch:
+
+jobs:
+  self-hosted-job:
+    runs-on: [self-hosted, my-linux-runner]
+
+    steps:
+      - name: Print hostname
+        run: hostname
+
+      - name: Print working directory
+        run: pwd
+
+      - name: Create file
+        run: echo "hello from runner" > test.txt

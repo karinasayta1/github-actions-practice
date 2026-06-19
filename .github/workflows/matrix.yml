@@ -1,0 +1,26 @@
+name: Matrix Build
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      fail-fast: false   
+      matrix:
+        os: [ubuntu-latest]
+        python-version: [3.14, 3.11, 3.12]
+
+    steps:
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Print Version
+        run: python --
+        
+      - name: Force failure
+        run: exit 1
