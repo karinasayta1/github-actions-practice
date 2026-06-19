@@ -13,10 +13,6 @@ on:
     secrets:
       docker_token:
         required: true
-    outputs:
-      build_version:
-        description: "Build version"
-        value: ${{ jobs.build.outputs.build_version }}
 
 jobs:
   build:
