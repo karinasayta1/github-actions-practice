@@ -13,4 +13,4 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Code changed in src/app"
+      - run: echo "Code changed in .github/"
