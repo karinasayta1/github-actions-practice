@@ -1,0 +1,1 @@
+https://github.com/karinasayta1/github-actions-practice/actions/workflows/docker-publish.yml/badge.svg
