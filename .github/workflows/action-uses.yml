@@ -1,0 +1,15 @@
+name: Use Composite Action
+
+on:
+  push:
+
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Run Custom Action
+        uses: ./.github/actions/setup-and-greet
+        with:
+          name: "Karina"
+          language: "en
