@@ -26,10 +26,12 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Print App Info
-        run: echo "Building ${{ inputs.app_name }} for ${{ inputs.environment }}"
+        run: |
+          echo "Building ${{ inputs.app_name }} for ${{ inputs.environment }}"
 
       - name: Check Secret
-        run: echo "Docker token is set: true"
+        run: |
+          echo "Docker token is set: true"
 
       - name: Set Version
         id: set_version
